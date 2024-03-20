@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+.blogs-container {
+  font-family: "DM Sans", sans-serif;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.blog-item:hover {
+  transform: translateY(-4px);
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-summary {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.blog-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blog-link:hover {
+  color: #0056b3;
+}
+
+.blog-image {
+  width: 15%;
+  margin-left: 10%;
+}
+
+.blog-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Color effects */
+.blog-item:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+.blog-item:nth-child(even) {
+  background-color: #f0f0f0;
+}

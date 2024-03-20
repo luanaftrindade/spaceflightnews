@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+
+.navBar {
+  display: flex;
+  justify-content: center;
+    font-family: "DM Sans", sans-serif;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navItem {
+  margin: 0 10px;
+}
+
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navItem a:hover {
+  color: #00ff4c;
+}
+
+.navItem a.active {
+  color: #007bff;
+}

@@ -5,6 +5,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import ArticlesList from "./components/ArticlesList";
 import Pagination from "./components/Pagination";
 import { TitleSection } from "./components/TitleSection";
+import BlogList from "./components/BlogList";
 import "./styles/App.css";
 
 export const ThemeContext = createContext(null);
@@ -34,7 +35,7 @@ function App() {
                 <>
                   <div className="app" id={theme}>
                     <ThemeToggle />
-                    <TitleSection />
+                    <TitleSection title={"SpaceFligt News"} />
                     <ArticlesList currentPage={currentPage} />
                     <Pagination
                       currentPage={currentPage}
@@ -46,8 +47,24 @@ function App() {
                 </>
               }
             ></Route>
-            <Route path="/blogs" element={<div>Blogs Page</div>} />
-            <Route path="/articles" element={<div>Articles Page</div>} />
+            <Route
+              path="/blogs"
+              element={
+                <div>
+                  <ThemeToggle />
+                  <TitleSection title={"Blogs"} />
+                  <BlogList currentPage={currentPage}></BlogList>
+                </div>
+              }
+            />
+            <Route
+              path="/articles"
+              element={
+                <div>
+                  <TitleSection title={"Articles"}></TitleSection>
+                </div>
+              }
+            />
           </Routes>
         </div>
       </Router>

@@ -17,10 +17,11 @@ function ArticlesList() {
   const fetchData = async () => {
     try {
       const articles = await apiService.getArticles();
-      console.log(articles);
-      console.log(articles.results);
       const startIndex = (currentPage - 1) * itemsPerPage;
-      const slicedData = articles.results.slice(startIndex, startIndex + itemsPerPage);
+      const slicedData = articles.results.slice(
+        startIndex,
+        startIndex + itemsPerPage
+      );
       setData(slicedData);
       setTotalPages(Math.ceil(articles.length / itemsPerPage));
     } catch (error) {
