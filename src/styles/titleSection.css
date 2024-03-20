@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+.titleSectionDiv {
+  display: flex;
+  justify-content: center;
+
+}
+
+.titleSectionText {
+  font-family: "DM Sans", sans-serif;
+  font-size: 3rem;
+  margin-top: -2%;
+}
+
+
+#dark .titleSectionText {
+    color: rgb(252, 249, 244);
+}

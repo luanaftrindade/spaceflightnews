@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Orbitron:wght@400..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#light {
+  background-color: aliceblue;
+  color: #000;
+}
+
+#dark {
+  background-color: #263f50;
+  color: bisque;
+}
+
+.react-switch {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+  padding-right: 2%;
+  align-items: flex-end;
+}
+
+.theme {
+  margin-top: 0.5%;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8rem;
+}
+
+#dark .theme {
+  color: #fdfdfd;
+}

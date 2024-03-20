@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+.articles-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2%;
+  font-family: "DM Sans", sans-serif;
+}
+
+.articles-list {
+  list-style: none;
+  padding: 0;
+}
+
+.article-item {
+  margin-bottom: 2%;
+  border-bottom: 1px solid #e0d2d2;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.article-content {
+  flex: 1;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.article-summary {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#dark .article-summary {
+    color: aliceblue;
+}
+
+.article-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#dark .article-link {
+    color: aqua;
+}
+
+.article-link:hover {
+  text-decoration: underline;
+}
+
+.article-image {
+  width: 15%;
+  margin-left: 10%;
+}
+
+.article-image img {
+  width: 100%;
+  border-radius: 10px;
+}

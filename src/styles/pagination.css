@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Orbitron:wght@400..900&display=swap");
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 3%;
+}
+
+.pagination .page-item {
+  margin-right: 1%;
+}
+
+.pagination .page-link {
+  display: block;
+  padding: 5px 10px;
+  background-color: #f8efef;
+  border-radius: 5px;
+  border: 1px solid #dddcdc;
+  color: #080606;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+}
+
+.pagination .page-link:hover {
+  background-color: #a6c1e0;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+}
