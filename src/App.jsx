@@ -1,12 +1,11 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import ThemeToggle from "./components/ThemeToggle";
 import ArticlesList from "./components/ArticlesList";
 import Pagination from "./components/Pagination";
 import { TitleSection } from "./components/TitleSection";
-import { useState } from "react";
 import "./styles/App.css";
-import ReactSwitch from "react-switch";
-import NavBar from "./components/NavBar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export const ThemeContext = createContext(null);
 
@@ -22,6 +21,7 @@ function App() {
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
   };
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <Router>
@@ -33,17 +33,8 @@ function App() {
               element={
                 <>
                   <div className="app" id={theme}>
-                    <div className="react-switch">
-                      <ReactSwitch
-                        onChange={toggleTheme}
-                        checked={theme === "dark"}
-                      />
-                      <label className="theme">
-                        {theme === "light" ? "Light Mode" : "Dark Mode"}
-                      </label>
-                    </div>
+                    <ThemeToggle />
                     <TitleSection />
-
                     <ArticlesList currentPage={currentPage} />
                     <Pagination
                       currentPage={currentPage}

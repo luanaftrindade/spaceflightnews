@@ -13,8 +13,6 @@ function NavBar() {
 
   return (
     <div className="navBar">
-      <p className="logo">CompanyLogo</p>
-
       {navItems.map((item) => (
         <div key={item.label} className={item.className}>
           <Link
