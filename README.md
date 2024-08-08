@@ -49,7 +49,7 @@ The Spaceflight News Project aims to provide users with the latest news and info
 4. Start the development server:
 
      ```bash
-     npm start
+     npm run dev
 
 5. Open Open http://localhost:3000 to view the project in your browser.
 
