@@ -51,7 +51,7 @@ The Spaceflight News Project aims to provide users with the latest news and info
      ```bash
      npm run dev
 
-5. Open Open http://localhost:3000 to view the project in your browser.
+5. Open local host to view the project in your browser.
 
 
 ## Usage
