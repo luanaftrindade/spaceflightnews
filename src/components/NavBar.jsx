@@ -6,7 +6,6 @@ function NavBar() {
   const navItems = [
     { label: "News", link: "/news", className: "navNews" },
     { label: "Blogs", link: "/blogs", className: "navBlogs" },
-    { label: "Articles", link: "/articles", className: "navArticles" },
   ];
 
   // To get the current pathname using useLocation
@@ -15,10 +14,12 @@ function NavBar() {
   return (
     <div className="navBar">
       {navItems.map((item) => (
-        <div key={item.label} className="navItem"> {/* Changed className to "navItem" */}
+        <div key={item.label} className="navItem">
+          {" "}
+          {/* Changed className to "navItem" */}
           <Link
             to={item.link}
-            className={pathname === item.link ? "active" : ""} 
+            className={pathname === item.link ? "active" : ""}
           >
             {item.label}
           </Link>

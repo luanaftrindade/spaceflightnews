@@ -6,11 +6,13 @@ const apiUrl = {
 };
 
 const apiService = {
-  getArticles: async function () {
+  getArticles: async function (page = 1, limit = 10) {
     try {
-      const response = await fetch(apiUrl.articles);
+      const offset = (page - 1) * limit;
+      const response = await fetch(`${apiUrl.articles}?limit=${limit}&offset=${offset}`);
       const data = await response.json();
       console.log("Articles:", data);
+      console.log(data.results);
       return data;
     } catch (error) {
       console.log("Error fetching articles: ", error);

@@ -1,54 +1,38 @@
 import React from "react";
 import "../styles/pagination.css";
 
-function Pagination({ currentPage, totalPages, handlePageChange, pageRange }) {
-  const renderPageButtons = () => {
-    const pageButtons = [];
-    const startPage = Math.max(1, currentPage - Math.floor(pageRange / 2));
-    const endPage = Math.min(totalPages, startPage + pageRange - 1);
+function Pagination({ postsPerPage, totalArticles, handlePagination, currentPage }) {
+  const totalPages = Math.ceil(totalArticles / postsPerPage);
+  const paginationNumbers = [];
+  const displayButtons = 10;
 
-    for (let i = startPage; i <= endPage; i++) {
-      pageButtons.push(
-        <li
-          key={i}
-          className={`page-item ${currentPage === i ? "active" : ""}`}
-        >
-          <button className="page-link" onClick={() => handlePageChange(i)}>
-            {i}
-          </button>
-        </li>
-      );
-    }
+  // calculate the starting and ending page numbers
+  let startPage = Math.max(currentPage - Math.floor(displayButtons / 2), 1);
+  let endPage = Math.min(startPage + displayButtons - 1, totalPages);
 
-    return pageButtons;
-  };
+  // adjust startPage if endPage is less than the number of buttons we want to display
+  if (endPage - startPage < displayButtons - 1) {
+    startPage = Math.max(endPage - displayButtons + 1, 1);
+  }
+
+  // generate page numbers for buttons
+  for (let i = startPage; i <= endPage; i++) {
+    paginationNumbers.push(i);
+  }
 
   return (
-    <nav>
-      <ul className="pagination">
-        <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-          <button
-            className="page-link"
-            onClick={() => handlePageChange(currentPage - 1)}
-          >
-            Previous
-          </button>
-        </li>
-        {renderPageButtons()}
-        <li
-          className={`page-item ${
-            currentPage === totalPages ? "disabled" : ""
-          }`}
+    <div className="pagination">
+      {paginationNumbers.map((pageNumber) => (
+        <button
+          aria-label={`Go to Page ${pageNumber}`}
+          key={pageNumber}
+          onClick={() => handlePagination(pageNumber)}
+          className={pageNumber === currentPage ? "active" : ""}
         >
-          <button
-            className="page-link"
-            onClick={() => handlePageChange(currentPage + 1)}
-          >
-            Next
-          </button>
-        </li>
-      </ul>
-    </nav>
+          {pageNumber}
+        </button>
+      ))}
+    </div>
   );
 }
 

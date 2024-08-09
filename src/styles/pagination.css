@@ -32,3 +32,10 @@
   background-color: #007bff;
   color: #fff;
 }
+
+.pagination button.active {
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+}
+
