@@ -1,16 +1,10 @@
-# Spaceflight React Project
+# Spaceflight News React Project
 
-This project utilizes the Spaceflight News API to fetch articles, blogs, and news related to spaceflight. It will also include a launch simulator as a future feature.
+This project utilizes the Spaceflight News API to fetch blogs and news related to spaceflight. It will also include a launch simulator as a future feature.
 
-## Table of Contents
+## Preview
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+![Captura de Ecrã (53)](https://github.com/user-attachments/assets/e3cfc440-823f-4c76-b3b5-f0ea9ef7d532)
 
 ## Introduction
 
@@ -18,16 +12,18 @@ The Spaceflight News Project aims to provide users with the latest news and info
 
 ## Features
 
-- Fetch articles, blogs, and news from the Spaceflight News API
+- Fetch news blogs from the Spaceflight News API
 - Display fetched data in an organized manner
 - Future feature: Launch simulator for simulated space missions
 
 ## Technologies Used
 
-- React: Frontend framework for building user interfaces
-- CSS: Styling language for designing the user interface
-- Spaceflight News API: Provides spaceflight-related data
-- React Router: Library for declarative routing in React applications
+<p align= left>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" />
+<img src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/react/react-original-wordmark.svg" alt="reactjs" width="40" height= "40"/>
+</p>
 
 ## Setup
 
@@ -39,7 +35,7 @@ The Spaceflight News Project aims to provide users with the latest news and info
 2. Navigate to the project directory:
    
    ```bash
-   cd spaceflight-news-project
+   cd spaceflightnews
 
 3. Install dependencies:
 
@@ -56,7 +52,7 @@ The Spaceflight News Project aims to provide users with the latest news and info
 
 ## Usage
 
-Once the project is set up and running, you can navigate through the different sections of the app using the navigation bar. Clicking on "Articles," "Blogs," or "News" will fetch and display the corresponding data from the Spaceflight News API.
+Once the project is set up and running, you can navigate through the different sections of the app using the navigation bar. Clicking on "News" or "Blogs", will fetch and display the corresponding data from the Spaceflight News API.
 
 ## Contributing
 
