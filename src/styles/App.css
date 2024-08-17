@@ -7,7 +7,7 @@ body {
 }
 
 #light {
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   color: #000;
 }
 
@@ -17,11 +17,15 @@ body {
 }
 
 .react-switch {
+  position: fixed;  
+  top: 15px;       
+  right: 20px;    
   display: flex;
   flex-direction: column;
-  padding-top: 2%;
-  padding-right: 2%;
-  align-items: flex-end;
+  align-items: center;
+
+  background-color: transparent; 
+  z-index: 1000;   
 }
 
 .theme {
@@ -30,6 +34,5 @@ body {
   font-size: 0.8rem;
 }
 
-#dark .theme {
-  color: #fdfdfd;
-}
+
+

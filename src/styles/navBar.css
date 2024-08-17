@@ -1,30 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-
 .navBar {
   display: flex;
+  position: fixed;
   justify-content: center;
-    font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-size: 2em;
   align-items: center;
-  background-color: #333;
   padding: 10px 0;
+  width: 100%; 
+  top: 0;
+}
+
+#light .navBar {
+  background-color: #f0f8ff;
+}
+
+#dark .navBar {
+  background-color: #263f50;
 }
 
 .navItem {
-  margin: 0 10px;
+  margin: 0 20px;
+  transition: transform 0.3s ease;
 }
 
 .navItem a {
-  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+
 }
 
-.navItem a:hover {
-  color: #00ff4c;
+#light .navItem a {
+  color: #116095;  
 }
 
-.navItem a.active {
-  color: #007bff;
+
+#dark .navItem a {
+  color: #e6eef4;  
 }
+
+#light .navItem:hover {
+  transform: scale(1.1); 
+}
+
+#dark .navItem:hover {
+  transform: scale(1.1); 
+}
+
+#light .navItem a:hover {
+  color: #9d2997;
+  font-size: 105%;
+}
+
+#dark .navItem a:hover {
+  color: #0f7611;
+}
+
+#light .navItem a.active {
+  color: #9d2997;
+}
+
+#dark .navItem a.active {
+  color: #0f7611;
+}
+
+

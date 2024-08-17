@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar"; // Import the NavBar component
 import ThemeToggle from "./components/ThemeToggle";
 import ArticlesList from "./components/ArticlesList";
 import Pagination from "./components/Pagination";
@@ -45,16 +45,16 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <Router>
-        <NavBar />
-        <div>
-          <Routes>
-            <Route
-              path="/news"
-              element={
-                <>
-                  <div className="app" id={theme}>
-                    <ThemeToggle />
+      <div className={`app ${theme}`} id={theme}>
+        <Router>
+          <NavBar />
+          <ThemeToggle />
+          <div>
+            <Routes>
+              <Route
+                path="/news"
+                element={
+                  <>
                     <TitleSection title={"SpaceFlight News"} />
                     <ArticlesList data={data} />
                     <Pagination
@@ -63,23 +63,23 @@ function App() {
                       handlePagination={handlePageChange}
                       currentPage={currentPage}
                     />
+                  </>
+                }
+              />
+              <Route
+                path="/blogs"
+                element={
+                  <div>
+                    <ThemeToggle />
+                    <TitleSection title={"Blogs"} />
+                    <BlogList currentPage={currentPage}></BlogList>
                   </div>
-                </>
-              }
-            />
-            <Route
-              path="/blogs"
-              element={
-                <div>
-                  <ThemeToggle />
-                  <TitleSection title={"Blogs"} />
-                  <BlogList currentPage={currentPage}></BlogList>
-                </div>
-              }
-            />
-          </Routes>
-        </div>
-      </Router>
+                }
+              />
+            </Routes>
+          </div>
+        </Router>
+      </div>
     </ThemeContext.Provider>
   );
 }
