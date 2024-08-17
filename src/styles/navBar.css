@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .navBar {
   display: flex;
   position: fixed;
   justify-content: center;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   font-size: 2em;
   align-items: center;
-  padding: 10px 0;
   width: 100%; 
   top: 0;
+  padding-top: 2%;
 }
 
 #light .navBar {
@@ -21,7 +22,7 @@
 }
 
 .navItem {
-  margin: 0 20px;
+  margin: 0 30px;
   transition: transform 0.3s ease;
 }
 

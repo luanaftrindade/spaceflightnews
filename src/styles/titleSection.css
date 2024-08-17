@@ -1,19 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 .titleSectionDiv {
-
   display: flex;
   justify-content: center;
+  transition: opacity 0.5s ease;
 
 }
 
 .titleSectionText {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   font-size: 3rem;
+  opacity: 0;
+  transform: translateX(5%);
+  animation: fadeSlideIn 2s ease forwards;
   margin-top: 7.5%;
 }
 
+.titleSectionDiv.hidden {
+  opacity: 0; /* fade out when hidden class is added */
+  pointer-events: none; /* prevent interaction when hidden */
+}
 
 #dark .titleSectionText {
-    color: rgb(252, 249, 244);
+  color: rgb(252, 249, 244);
+}
+
+/* Keyframes for fade and slide-in animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(5%); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End in original position */
+  }
 }
